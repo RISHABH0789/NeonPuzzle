@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Neon Puzzle | Modes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="modes-container">
+    <h1 class="neon-text">CHOOSE MODE</h1>
+    
+    <div class="modes-grid">
+        <div class="mode-card" onclick="selectMode('easy')">
+            <div class="mode-icon">01</div>
+            <h3>RECON</h3>
+            <p>5 Levels | 5x5 Grid</p>
+            <span class="difficulty easy">START</span>
+        </div>
+
+        <div class="mode-card" onclick="selectMode('medium')">
+            <div class="mode-icon">02</div>
+            <h3>INFILTRATION</h3>
+            <p>5 Levels | 7x7 Grid</p>
+            <span class="difficulty medium">START</span>
+        </div>
+
+        <div class="mode-card" onclick="selectMode('hard')">
+            <div class="mode-icon">03</div>
+            <h3>OVERRIDE</h3>
+            <p>5 Levels | 9x9 Grid</p>
+            <span class="difficulty hard">START</span>
+        </div>
+    </div>
+
+    <button onclick="window.location.href='home.html'" class="back-btn">RETURN TO HUB</button>
+</div>
+
+<script>
+    function selectMode(mode) {
+        localStorage.setItem('gameMode', mode);
+        // This will launch the campaign
+        window.location.href = 'game.html';
+    }
+</script>
+</body>
+</html>

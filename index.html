@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Puzzle | Auth</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <div class="glass-card">
+        <h1 id="auth-title">LOGIN</h1>
+        
+        <form id="auth-form" onsubmit="return false;">
+            <div class="input-container">
+                <input type="text" id="username" placeholder="USERNAME" required>
+                <div class="input-glow"></div>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="password" placeholder="PASSWORD" required>
+                <div class="input-glow"></div>
+            </div>
+
+            <div class="input-container" id="confirm-group" style="display: none;">
+                <input type="password" id="confirm-password" placeholder="CONFIRM PASSWORD">
+                <div class="input-glow"></div>
+            </div>
+
+            <button type="submit" id="auth-btn" class="menu-btn neon-cyan-btn">ENTER SYSTEM</button>
+        </form>
+
+        <p class="switch-text">
+            <span id="toggle-msg">NEW USER?</span> 
+            <span id="toggle-link" onclick="window.toggleAuth()">CREATE ACCOUNT</span>
+        </p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

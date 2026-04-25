@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Puzzle | Arena</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <div class="game-container">
+        <header class="game-hud">
+            <div class="hud-item">
+                <span class="hud-label">TIME</span>
+                <span id="timer" class="hud-value">00:00</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">LEVEL</span>
+                <span id="level-num" class="hud-value">01</span>
+            </div>
+        </header>
+
+        <main class="game-canvas-area">
+            <div id="game-board" class="grid-layer">
+                <canvas id="gameCanvas"></canvas>
+            </div>
+        </main>
+
+        <footer class="game-controls">
+            <button onclick="skipLevel()" class="menu-btn btn-skip">SKIP LEVEL</button>
+            <button onclick="window.location.href='home.html'" class="menu-btn btn-logout">ABORT</button>
+        </footer>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
