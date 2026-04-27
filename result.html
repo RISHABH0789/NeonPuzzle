@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonPuzzle | Final Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <div class="result-container">
+        <h1 class="neon-text">SUMMARY</h1>
+
+        <div class="stats-grid">
+            <div class="stat-block success">
+                <span class="stat-label">LEVEL COMPLETED</span>
+                <div class="stat-value"><span id="score-val">0</span>/5</div>
+            </div>
+
+            <div class="stat-block warning">
+                <span class="stat-label">LEVEL SKIPPED</span>
+                <div class="stat-value"><span id="skip-val">0</span>/5</div>
+            </div>
+        </div>
+
+        <div class="time-footer">
+            <span class="label">TOTAL UPTIME:</span>
+            <span id="display-time" class="value">00:00</span>
+        </div>
+
+        <div id="upload-status" class="status-text">INITIALIZING DATA UPLOAD...</div>
+
+        <button onclick="window.location.href='home.html'" class="menu-btn btn-primary">HOME</button>
+    </div>
+    <script src="js/result.js"></script>
+</body>
+</html>
